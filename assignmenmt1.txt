@@ -1,0 +1,37 @@
+1. SELECT * FROM EMPLOYEE ORDER BY SALARY DESC LIMIT 3;
+A142|TARA CUMMINGS|D04|99475|A187
+A132|PAUL VINCENT|D01|94971|A120
+A128|ADAM WAYNE|D05|94324|A165
+
+
+2.SELECT * FROM EMPLOYEE ORDER BY SALARY ASC LIMIT 1;
+A111|JOHN HELLEN|D01|15380|A120
+
+4. select emp_id,name from employee where emp_id in(select  manager_id from employee);
+A120|TIM ARCHER
+A165|NATASHA STEVENS
+A178|BRUCE WILLS
+A187|ADAM JUSTIN
+
+5.select emp_id,name from employee where emp_id in(select  manager_id from employee)order by salary asc limit 1;
+A165|NATASHA STEVENS
+
+6.SELECT count(*) FROM EMPLOYEE WHERE EMP_ID IN (select emp_id from employee e inner join department d  WHERE  d.dep_name='COMMUNICATIONS'AND e.dep_id=d.dep_id);
+
+6
+
+
+7. SELECT EMP_ID,NAME FROM EMPLOYEE WHERE EMP_ID IN (select emp_id from employee e inner join department d  WHERE  d.dep_name='FINANCE'AND e.dep_id=d.dep_id)ORDER BY SALARY DESC LIMIT 1;
+A128|ADAM WAYNE
+
+
+8.SELECT EMP_ID,NAME FROM EMPLOYEE WHERE EMP_ID IN (select emp_id from employee e inner join department d  WHERE  d.dep_name='PRODUCT'AND e.dep_id=d.dep_id)ORDER BY SALARY ASC LIMIT 1;
+A156|NICK MARTIN
+
+
+9.SELECT COUNT(*),NAME FROM EMPLOYEE WHERE SALARY=(SELECT MAX(SALARY) FROM EMPLOYEE WHERE EMP_ID IN (select emp_id from employee e inner join department d  WHERE  d.dep_name='HEALTH'AND e.dep_id=d.dep_id));
+1|PAUL VINCENT
+
+10.SELECT *FROM EMPLOYEE WHERE MANAGER_ID IN(SELECT DISTINCT e1.EMP_ID FROM EMPLOYEE e1,EMPLOYEE e2 where e1.emp_id=e2.manager_id and e1.name='NATASHA STEVENS');
+A128|ADAM WAYNE|D05|94324|A165
+A129|JOSEPH ANGELIN|D05|94324|A165
