@@ -1,0 +1,82 @@
+--ProblemSet00 27 july,2018
+--submitted by radha.nachiappan@accenture.com
+
+
+1)How does agile testing (development) methodology differ from other testing (development) methodologies?
+        Agile is broken into individual models where as in other models it is not broken .Customers frequently can look at the product and stimulate changes in the product
+
+
+2)What are the most important components of Agile?
+	      Working software 
+	      Teams manage and organize themselves
+	      Team regularly interacts with business
+	      Agile is responsive to changing needs
+
+
+3)What is difference between Epic,features, User stories & Tasks?
+        Epic-It is an end product, it may take several sprints to complete an epic.
+	      Features-By splitting a feature in smaller stories, the user can give early feedback to the developers to issues quickly
+        User stories-A user story helps to create a simplified description of a requirement.
+	      Tasks-Tasks are smaller work items that build a story.
+
+
+4)Explain what is a product backlog in Scrum
+	      The propduct backlog is a list which holds many things like that might be needed in the product.The product owner shows up at the sprint planning meeting with the prioritized agile product backlog and describes the top items to the team. The team then determines which items they can complete during the coming sprint.
+
+
+5)What is Scrum Sprint?
+	      Scrum sprint is a time boxed meeting  which is used in a  daily scrum where product owners,developers,testers will be present and discussing about the work has to be completed in a sprint and also the progress of the product and tools which they have used in their product. 
+
+
+6)What are the artifacts of Scrum process?
+	      User story-Business functionalities
+	      Product backlog-Stories awaiting completion
+      	Sprint backlog-product has to be completed in next sprint
+      	Progress charts
+
+
+7)What do you understand by sprint backlog?
+	      In sprint backlog, what we have done so far,what is in progress,what we are going to do  in our product has to be recorded during the scrum sprint .The Sprint Backlog contains user stories popped off the top of the Product Backlog during Sprint Planning. However, the Sprint Backlog usually contains many things not on the Product Backlog, such as: Tasks that have been decomposed from the user stories accepted by the Team for the current iteration
+  
+
+8)What is the role of the Product Owner?
+	      Product owner's are the ones who handles the business requirments of the product from clients.They should have more knowledge about the product for the valuable software to be delivered.
+
+
+9)What are the different roles in Scrum?
+	      Scrum Master
+	      Product Owner
+	      Developers
+	      Team leader
+
+
+10)What are the responsibilities of a Scrum Master
+	      Scrum master is the one who responsible for the team has a  good working environment .He assists and supports the team in creating the deliverables.He should gathered information and ideas from one team and communicating with the other teams properly.
+
+
+11)What are different ceremonies and their importance in Scrum?
+        Sprint planning-It is the scrum meeting in which the team memebers will be discussing about the work can be done in a sprint or not.
+	      Daily scrum-It helps to get to know more about the product updates of the team  and collaboration will be occured through out the project.
+	      Sprint review-The Sprint Review is the scrum ceremony where all work completed during the sprint can be showcased the stakeholders.
+	      Sprint retrospective-The Sprint Retrospective is the final scrum ceremony in the sequence that allows the team to look back on the work that was just completed and identify items that could be improved.
+
+
+12)What is the difference between Sprint Planning Meeting and Sprint Retrospective Meeting?
+	      Sprint planning Meeting-It happens at the beginning of a new sprint .Some discussions and negotiations, the team should create a sprint backlog that contains all items they are committing to complete at the end of the sprint.
+	      Sprint Retrospective Meeting-What went well ?
+				                       What didn’t go well?
+				                       What could we do differently to improve?
+
+
+
+13)What is the difference between agile & scrum
+	      Agile-It is a set of principles which is used to develop a software product by giving deliverables early and get customer's satisfaction.
+	      Scrum- It is a framework which helps to implement agile.
+
+
+14)Explain Agile in 30 seconds.
+        It is a set of principles which is used to develop a software product by giving deliverables early and get customer's satisfaction.Agile is a time boxed, iterative approach to software delivery that builds software incrementally from the start of the project, instead of trying to deliver it all at once near the end.
+
+
+15)What is the Daily Stand-Up?
+	      Daily stand-up is a scrum meeting where team members will be having converse about the project updates in which each one of us has to be stated that what they have done ,what they are going to do in project.
