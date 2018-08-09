@@ -1,0 +1,39 @@
+--Aug 7,2018
+--submitted by radha.nachiappan@accenture.com
+
+a.What is an Environment
+  It is a collection of software and hardware.It is like a set up tool in which work is done that should not affect the other environment
+
+b.Name different Environment used in Cigna
+  Development 
+  Testing
+  Production
+
+c.Does different Environment differ. (yes/no with explanation) 
+   No,we should have similar environment because at a time we 
+
+d.Kind’s of test based environment we use in Cigna.
+   System
+   Integration
+   UAT
+
+e.What is CI.
+   It is a development practice where the code is dumped in shared repository as many times in a day.
+
+f.What is CD.
+   Continuous delivery is a approach in which product is realeasable frequently and getting early feedbacks.
+
+g.How CI/CD fits in Agile.
+     In Agile,Continuous integration is the first stage while delivering the product.Continuous Delivery is a process in which where we get early feedbacks.This is happening only in agile
+
+h.What do we mean by building and packaging.
+    Developed code should be merged for continuous integrating in which entire source code is compiled and generated the basic file.
+
+i.What is an artifact.
+    Any file is related to a product and holds business value.
+
+
+j.Name some build tools.
+   Maven
+   Apache ant
+   Gradle
