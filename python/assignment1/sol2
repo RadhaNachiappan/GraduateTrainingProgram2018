@@ -1,0 +1,168 @@
+submitted by radha.nachiappan
+
+1)get first name and last name from user and print your full name 
+
+a=raw_input("ENTER FIRSTNAME ")
+b=raw_input("ENTER LASTNAME ")
+print("FULLNAME IS "+a+" "+b) 
+
+
+O/P:
+ENTER FIRSTNAME RADHA
+ENTER LASTNAME NACHIAPPAN
+FULLNAME IS RADHA NACHIAPPAN
+
+2) get ur full name, age as input from user and print first name and last name , age using string slicing
+ i) 2 raw_input get name  and age 
+ ii) print first name and last name and age 
+ iii) WHEN age >= 18 , he/she is eligible to vote
+ iv) WHEN age < 18 , he/she is not eligible to vote
+
+a=raw_input("ENTER FULLNAME")
+b=raw_input("ENTER AGE")
+print("FIRST NAME IS "+a[0:6])
+print("LAST NAME IS "+a[6:])
+print("AGE IS "+b)
+if (b>=18):print(a +" "+ "is eligible for vote")
+else:print(a +" " + "is not eligible for vote")
+
+
+o/p:
+ENTER FULLNAME radha nachiappan
+ENTER AGE 23
+FIRST NAME IS  radha
+LAST NAME IS  nachiappan
+AGE IS  23
+ radha nachiappan is eligible for vote
+
+3)Calculating your birth number in numerology
+26/11/1978
+2+6+1+1+1+7+8 = 8
+
+
+a=raw_input("ENTER DATE ")
+b=int(a[0])+int(a[1])+int(a[3])+int(a[4])+int(a[6])+int(a[7])+int(a[8])+int(a[9])
+print(b)
+b=str(b)
+c=int(b[0])+int(b[1])
+print(c)
+
+o/p:
+ENTER DATE 07/12/1996
+35
+8
+
+4) Write a Python program to perform sum of three given integers. 
+       However, if any of the two values are equal then sum will be zero (eg : 2+1+1 = 0)
+
+a=input("Enter a")
+b=input("Enter b")
+c=input("Enter c")
+d=0
+if(a==b or a==c or b==c):print("sum= "+str(d))
+else :print("sum= "+str(a+b+c))
+
+o/p:
+Enter a 1
+Enter b1
+Enter c2
+sum= 0
+
+5) Write a Python program to check whether a year is leap year or not
+
+a=input("enter year")
+if(a%4==0) or (a%100==0) or (a%400)==0:
+   print( str(a) +" "+ "is a leap year")
+else:print(str(a) +" "+ "is not a leap year")
+ 
+o/p:
+enter year2015
+2015 is not a leap year
+
+enter year 1996
+1996 is a leap year
+
+
+6)
+Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
+
+Suppose the following input is supplied to the program:
+
+Hello world!
+
+Then, the output should be:
+
+UPPER CASE 1
+
+LOWER CASE 9
+
+
+a=raw_input("enter string ")
+up=0
+lo=0
+b=list(a)
+for i in a:
+  if i.isupper():
+      up=up+1
+  if i.islower():
+      lo=lo+1
+print("Number of lower characters are: "+" " +str(lo))
+print("Number of upper characters are:"+ " "+str(up))
+
+o/p:
+enter string radha uNHAK
+Number of lower characters are: 6
+Number of upper characters are: 4
+   
+
+
+7)  write a python script to validate the strong password (combination of characters alphabets and numbers,special characters in it. if not weak password)
+eg: Acc9876$
+it is strong password
+abcd
+it is weak password
+
+
+8) declare a list containing numbers
+    a) get only even numbers
+    b) perform sum of those even numbers
+
+a=[1,2,3,4,5,6,7,8,9,10]
+print(a)
+i=0
+sum=0
+for i in a:
+        if (i%2==0):
+           sum=i+sum
+           
+print("sum of even number is "+str(sum))
+
+
+o/p:
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+sum of even number is 30
+
+9) Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which 
+contains every number.
+
+Suppose the following input is supplied to the program:
+34,67,55,33,12,98
+Then, the output should be:
+['34', '67', '55', '33', '12', '98']
+('34', '67', '55', '33', '12', '98')
+
+a=raw_input("enter numbers ")
+y=type(a)
+c=a.split(',')
+b=list(c)
+d=tuple(c)
+print(b)
+print(d)
+print(y)
+
+o/p:
+enter numbers 1,2,35
+['1', '2', '35']
+('1', '2', '35')
+<type 'str'>
+ 
