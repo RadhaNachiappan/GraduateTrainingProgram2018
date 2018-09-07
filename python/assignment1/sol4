@@ -1,0 +1,51 @@
+1.import operator
+tuple_1=()
+dic={}
+input=raw_input("enter the string")
+lists_1=list(input)
+lists_1.sort()
+print(lists_1)
+d={}
+for i in range(len(lists_1)-1):
+	if(lists_1[i]!=lists_1[i+1]):
+		print(i,i+1)
+		counts=lists_1.count(lists_1[i])
+		d[lists_1[i]]=counts
+		
+if lists_1[len(lists_1)-2] == lists_1[len(lists_1)-1]:
+		counts=lists_1.count(lists_1[i])
+		d[lists_1[i]]=counts	
+else:
+		counts=lists_1.count(lists_1[len(lists_1)-1])
+		d[lists_1[len(lists_1)-1]]=counts	
+sorted_x = sorted(d.items(), key=operator.itemgetter(1))
+print(sorted_x)
+mylist=sorted_x
+
+
+
+2.testcases=raw_input("enter no of testcases")
+i=0
+while(i<testcases):
+	lista=[]
+	listb=[]
+	setA=raw_input("enter no of elements")
+	j=0
+	while(j<int(setA)):
+		elements=input()
+		lista.append(elements)
+		j=j+1
+		print(lista)
+
+	setB=raw_input("enter no of elements")
+	h=0
+	while(h<int(setB)):
+		elements1=input()
+		listb.append(elements1)
+		h=h+1
+        print(listb)		
+	set1=set(lista)
+	set2=set(listb)
+	result=set1.issubset(set2)
+	print(result)
+	i=i+1
