@@ -1,0 +1,95 @@
+ProblemSet06-CI_CD  11th september 2018   
+Submitted BY radha.nachiappan  
+
+import sqlite3
+class connect:
+	
+	def connect_db(self,db):
+		#db=raw_input("database name you need to connect")
+		#db="mywork10.db"
+		self.conn=sqlite3.connect(db)
+		self.c = self.conn.cursor()
+		
+	def create_db(self,sqltb):
+		#sql=raw_input("Query to create table")
+		#sql="CREATE TABLE student(Name varchar, Rollno text , Subject1 integer, Subject2 integer, Subject3 integer)"
+		self.c.execute(sqltb)
+		self.conn.commit()
+		
+	def insert_db(self,lists):
+		#lists=[('sree','14bc123',90,100,90),('sathya','14bc124',60,70,80),('vicky','14bc125',90,100,80),('soun','14bc127',40,60,90)]
+		self.c.execute("INSERT INTO student VALUES (?,?,?,?,?)",lists)
+		"""self.c.execute("INSERT INTO student VALUES ('sree','14bc123',90,100,90)")
+		self.c.execute("INSERT INTO student VALUES ('sathya','14bc124',60,70,80)")
+		self.c.execute("INSERT INTO student VALUES ('vicky','14bc125',90,100,80)")
+		self.c.execute("INSERT INTO student VALUES ('shruthi','14bc126',70,40,50),")
+		self.c.execute("INSERT INTO student VALUES ('soun','14bc127',40,60,90)")
+		"""
+		self.conn.commit()
+	def update_db(self,sqlup):
+		#self.c.execute("UPDATE student SET  Name= 'sruthi.s' WHERE  Rollno= '14bc126'")
+		self.c.execute(sqlup)
+ 		self.conn.commit()
+		
+	def counts_db(self,sqlcnt):
+		#self.c.execute("select count(name) from student")
+		self.c.execute(sqlcnt)
+		var=self.c.fetchone()
+		print(var)	
+		
+	def delete_db(self):
+		#self.c.execute("delete from student WHERE  Rollno= '14bc126'")
+		self.conn.commit()
+		
+	def view_db(self):
+		for row in self.c.execute("select * from student"):
+			print(row)
+		self.conn.commit()
+		
+	def dropping_db(self,sqldrp):
+		#self.c.execute("drop table student")
+		self.c.execute(sqldrp)
+		self.conn.commit()
+		
+obj=connect()
+db=raw_input("database name you need to connect")
+obj.connect_db(db)
+#sqltb=raw_input("Query to create table")
+sqltb=CREATE TABLE student(Name varchar, Rollno text , Subject1 integer, Subject2 integer, Subject3 integer)
+obj.create_db(sqltb)
+
+cnt=raw_input("enter the no of insert stmts")
+len_list=5
+d={}
+for i in range(int(cnt)):
+	lis=[]
+	
+	for j in range(int(len_list)):
+		print(j)
+		if j==0:
+			a=raw_input("enter the name:")
+			print(j)
+		if j==1:
+			a=raw_input("enter the rollnum:")
+		if j==2:
+			a=raw_input("enter the m1:")
+		if j==3:
+			a=raw_input("enter the m2:")
+		if j==4:
+			a=raw_input("enter the m3:")	
+		print(j)	
+		lis.append(a)
+		
+	d[i]=lis
+	obj.insert_db(d[i])
+
+
+sqlup=raw_input("Query to update table")
+obj.update_db(sqlup)
+sqlcnt=raw_input("query to count")
+obj.counts_db(sqlcnt)
+sqldel=raw_input("enter the delete query")
+obj.delete_db(sqldel)
+obj.view_db()
+sqldrp=raw_input("enter the drop_tb query")
+obj.dropping_db(sqldrp)
