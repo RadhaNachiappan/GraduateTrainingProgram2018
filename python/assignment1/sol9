@@ -1,0 +1,94 @@
+ProblemSet09-python  17th September 2018   
+ Submitted BY radha.nachiappan    
+ 
+
+
+ASSIGNMENT_1
+#Import the necessary libraries
+import pandas as pd
+import csv
+from pandas import Series
+import matplotlib.pyplot as plt
+import numpy as np
+###1##
+#What is the price of each item? (print a data frame with only two columns item_name and item_price)
+chipo=pd.read_csv('chipotle.tsv',delimiter='\t')
+print(chipo)
+a=pd.Series(name=chipo["item_price"])
+b=pd.Series(name=chipo["item_name"])
+
+d1=Series.to_frame(a)
+d2=Series.to_frame(b)
+all_data_col=pd.concat(d1,d2)
+print(all_data_col)
+###2##
+#What is the price of each item? (print a data frame with only two columns item_name and item_price)
+chipo=pd.read_csv('chipotle.tsv',delimiter='\t')
+d1=chipo["item_price"]
+d11=Series.to_frame(d1)
+print(d1)
+#print(type(d11))
+
+
+d2=chipo["item_name"]
+d22=Series.to_frame(d2)
+print(d22)
+#print(type(d2))
+
+result = pd.concat([d11, d22], axis=1)
+print(result)
+
+df=chipo[["item_name","item_price"]]
+#Sort by the name of the item
+print(df.sort_values(["item_name"]))
+#How many times were a Veggie Salad Bowl ordered?
+print(pd.value_counts("Veggie Soft Tacos"))
+
+
+
+ASSIGNMENT_2
+import pandas as pd
+raw_data_1 = {
+        'subject_id': ['1', '2', '3', '4', '5'],
+        'first_name': ['Alex', 'Amy', 'Allen', 'Alice', 'Ayoung'], 
+        'last_name': ['Anderson', 'Ackerman', 'Ali', 'Aoni', 'Atiches']}
+data_1=pd.DataFrame(raw_data_1) 
+#print(data_1)  
+raw_data_2 = {
+        'subject_id': ['4', '5', '6', '7', '8'],
+        'first_name': ['Billy', 'Brian', 'Bran', 'Bryce', 'Betty'], 
+        'last_name': ['Bonder', 'Black', 'Balwner', 'Brice', 'Btisan']}
+data_2=pd.DataFrame(raw_data_2) 
+#print(data_2) 
+raw_data_3 = {
+        'subject_id': ['1', '2', '3', '4', '5', '7', '8', '9', '10', '11'],
+        'test_id': [51, 15, 15, 61, 16, 14, 15, 1, 61, 16]}
+data_3=pd.DataFrame(raw_data_3)     
+#print(data_3) 
+
+#Join the two dataframes along rows and assign it to all_data
+all_data= pd.merge(data_1, data_2,  how='outer')
+print(all_data)
+
+#Join the two dataframes along columns and assing it to all_data_col
+all_data_col=pd.concat([data_1,data_2], axis=1)
+print(all_data_col)
+
+
+print(data_3)
+
+#Merge all_data and data3 along the subject_id value
+merge_3= pd.merge(all_data, data_3,on="subject_id")
+print(merge_3)
+
+
+#Merge only the data that has the same 'subject_id' on both data1 and data2
+merge_4= pd.merge(data_1, data_2,  how='inner',on="subject_id")
+print(merge_4)
+
+#Merge all values in data1 and data2, with matching records from both sides where available.Merge all values in data1 and data2, with matching records from both sides where available.
+merge_5= pd.merge(data_1, data_2,  how='outer',on='subject_id')
+print(merge_5)
+
+
+
